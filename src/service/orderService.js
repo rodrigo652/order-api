@@ -1,20 +1,16 @@
 const orderRepository = require("../repository/orderRepository");
 
 exports.createOrder = async (dto) => {
-    const order = {
-      orderId: dto.numeroPedido,
-      value: dto.valorTotal,
-      creationDate: new Date(dto.dataCriacao)
-    }
+    const { numeroPedido, valorTotal, dataCriacao, items } = data;
 
-    await orderRepository.createOrder(order);
+    await orderRepository.createOrder({
+      numeroPedido,
+      valorTotal,
+      dataCriacao
+    });
 
-    for (const item of dto.items) {
-        await orderRepository.createItem(order.orderId, {
-            productId: item.idItem,
-            quantity: item.quantidadeItem,
-            price: item.valorItem
-        });
+    for (const item of items) {
+      await orderRepository.createItem(numeroPedido, item);
     }
 };
 

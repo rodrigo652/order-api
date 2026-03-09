@@ -1,9 +1,10 @@
 const db = require("../config/db");
 
 exports.createOrder = async (order) => {
+   const { numeroPedido, valorTotal, dataCriacao } = order;
     await db.query(
         "INSERT INTO `order` (orderId, value, creationDate) VALUES (?, ?, ?)",
-        [order.orderId, order.value, order.creationDate]
+         [numeroPedido, valorTotal, dataCriacao ]
     );
 };
 
