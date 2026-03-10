@@ -91,6 +91,16 @@ router.get("/order/:id", authMiddleware, orderController.getOrder);
  *         required: true
  *         schema:
  *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               valorTotal:
+ *                 type: number
+ *                 example: 15000
  *     responses:
  *       200:
  *         description: Pedido atualizado

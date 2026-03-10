@@ -1,6 +1,6 @@
 const orderRepository = require("../repository/orderRepository");
 
-exports.createOrder = async (dto) => {
+exports.createOrder = async (data) => {
     const { numeroPedido, valorTotal, dataCriacao, items } = data;
 
     await orderRepository.createOrder({

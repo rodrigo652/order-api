@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-const SECRET = "segredo_super_api";
+const SECRET = process.env.JWT_SECRET;
 
 exports.login = (req, res) => {
 
