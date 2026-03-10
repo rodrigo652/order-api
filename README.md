@@ -39,7 +39,7 @@ DB_PASSWORD=root
 DB_NAME=orderdb  
 DB_CONNECTION_LIMIT=10  
 
-JWT_SECRET=secret  
+JWT_SECRET=segredo_super_api
 PORT=3000  
 
 ---
