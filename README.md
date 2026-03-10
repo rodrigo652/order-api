@@ -33,14 +33,16 @@ npm install
 
 Crie um arquivo `.env` na raiz do projeto:
 
+PORT=3000 
 DB_HOST=localhost  
 DB_USER=root  
 DB_PASSWORD=root  
 DB_NAME=orderdb  
 DB_CONNECTION_LIMIT=10  
+API_URL=http://localhost:3000
 
 JWT_SECRET=segredo_super_api
-PORT=3000  
+ 
 
 ---
 
