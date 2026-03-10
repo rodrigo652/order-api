@@ -2,7 +2,7 @@ API REST para gerenciamento de pedidos, permitindo criar, consultar, atualizar e
 
 ---
 
-# 🚀 Tecnologias Utilizadas
+# Tecnologias Utilizadas
 
 - Node.js
 - Express
@@ -13,7 +13,7 @@ API REST para gerenciamento de pedidos, permitindo criar, consultar, atualizar e
 
 ---
 
-# 📥 Instalação
+# Instalação
 
 Clone o repositório:
 
@@ -29,7 +29,7 @@ npm install
 
 ---
 
-# ⚙️ Configuração
+# Configuração
 
 Crie um arquivo `.env` na raiz do projeto:
 
@@ -44,7 +44,7 @@ PORT=3000
 
 ---
 
-# ▶️ Executar o Projeto
+# Executar o Projeto
 
 node src/server.js
 
@@ -54,7 +54,7 @@ http://localhost:3000
 
 ---
 
-# 📚 Documentação da API
+# Documentação da API
 
 A documentação interativa da API está disponível via Swagger:
 
@@ -62,7 +62,7 @@ http://localhost:3000/api-docs
 
 ---
 
-# 🔐 Autenticação
+# Autenticação
 
 Algumas rotas exigem autenticação via JWT.
 
@@ -78,7 +78,7 @@ Bearer SEU_TOKEN
 
 ---
 
-# 📡 Endpoints
+# Endpoints
 
 Criar Pedido  
 POST /order
@@ -94,41 +94,3 @@ PUT /order/:id
 
 Deletar Pedido  
 DELETE /order/:id
-
----
-
-# 📄 Exemplo de Request
-
-{
- "numeroPedido": "v10089015vdb-01",
- "valorTotal": 10000,
- "dataCriacao": "2023-07-19T12:24:11.5299601+00:00",
- "items": [
-  {
-   "idItem": "2434",
-   "quantidadeItem": 1,
-   "valorItem": 1000
-  }
- ]
-}
-
-A API realiza o mapeamento dos campos antes de salvar no banco de dados.
-
----
-
-# 🗂 Estrutura do Projeto
-
-src  
- ├── controllers  
- ├── services  
- ├── repository  
- ├── routes  
- ├── middleware  
- ├── config  
- └── server.js  
-
----
-
-# 👨‍💻 Autor
-
-Projeto desenvolvido como teste técnico de backend com Node.js.
